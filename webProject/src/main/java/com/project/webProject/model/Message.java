@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -32,7 +33,7 @@ public class Message {
     private String messageContent;
 
     @Column(name = "send_time")
-    private Timestamp sendTime;
+    private LocalDateTime sendTime;
 
 
 }

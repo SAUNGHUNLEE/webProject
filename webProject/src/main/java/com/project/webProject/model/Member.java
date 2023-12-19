@@ -7,12 +7,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "member")
 public class Member {
     @Id
@@ -30,7 +32,7 @@ public class Member {
     private String name;
 
     @Column(name = "join_day")
-    private Timestamp joinDay;
+    private LocalDateTime joinDay;
 
     @Column(name = "profile")
     private String profile;
@@ -40,6 +42,9 @@ public class Member {
 
     @Column(name = "state")
     private int state; //0:미인증 1:인증
+
+    @Column(name = "birthday")
+    private LocalDate birthDay; //0:미인증 1:인증
 
 
 }
